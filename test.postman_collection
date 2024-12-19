@@ -1,0 +1,527 @@
+{
+	"info": {
+		"_postman_id": "24fb7b17-9768-4e71-8a99-0604783be538",
+		"name": "Another  test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "35095642"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"id\": 1,\r\n        \"name\": \"True Love\",\r\n        \"type\": \"non-fiction\",\r\n        \"available\": false\r\n    },\r\n    {\r\n        \"id\": 5,\r\n        \"name\": \"Real Trouble\",\r\n        \"type\": \"fiction\",\r\n        \"available\": true\r\n    },\r\n    {\r\n        \"id\": 8,\r\n        \"name\": \"CSI Miami\",\r\n        \"type\": \"fiction\",\r\n        \"available\": true\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3005/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3005",
+					"path": [
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status 200\", function() {\r",
+							"    pm.response.to.have.status(200)\r",
+							"})\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3005/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3005",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"name\": \"Nova ubavna pricha\",\r\n    \"type\": \"fiction\",\r\n    \"available\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3005/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3005",
+					"path": [
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Nova ubavna pricha\",\r\n    \"available\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3005/update/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3005",
+					"path": [
+						"update",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3005/delete/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3005",
+					"path": [
+						"delete",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request Copy",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Expected IDs to check in the response\r",
+							"const expectedIds = [5, 8];\r",
+							"\r",
+							"// Parse the response body as JSON\r",
+							"const response = pm.response.json();\r",
+							"\r",
+							"// Check if the response is an array\r",
+							"pm.test(\"Response is an array\", () => {\r",
+							"    pm.expect(response).to.be.an(\"array\");\r",
+							"});\r",
+							"\r",
+							"// Validate each expected ID is present in the response\r",
+							"pm.test(\"All expected IDs are present in the response\", () => {\r",
+							"    // Extract all IDs from the response array\r",
+							"    const responseIds = response.map(item => item.id);\r",
+							"\r",
+							"    // Check if every expected ID is in the response IDs\r",
+							"    expectedIds.forEach(id => {\r",
+							"        pm.expect(responseIds).to.include(id, `ID ${id} should be present`);\r",
+							"    });\r",
+							"});\r",
+							"\r",
+							"// Optional: Check the details of each item by ID\r",
+							"expectedIds.forEach(id => {\r",
+							"    pm.test(`Check details for item with ID ${id}`, () => {\r",
+							"        const item = response.find(item => item.id === id);\r",
+							"\r",
+							"        // Ensure the item exists\r",
+							"        pm.expect(item).to.be.an(\"object\", `Item with ID ${id} should exist`);\r",
+							"\r",
+							"        // Add specific assertions for the item's structure\r",
+							"        if (item) {\r",
+							"            pm.expect(item).to.have.property(\"name\");\r",
+							"            pm.expect(item).to.have.property(\"type\");\r",
+							"            pm.expect(item).to.have.property(\"available\");\r",
+							"        }\r",
+							"    });\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3005/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3005",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request Copy",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3005/delete/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3005",
+					"path": [
+						"delete",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request Copy 2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Expected IDs to check in the response\r",
+							"const expectedIds = [8];\r",
+							"\r",
+							"// Parse the response body as JSON\r",
+							"const response = pm.response.json();\r",
+							"\r",
+							"// Check if the response is an array\r",
+							"pm.test(\"Response is an array\", () => {\r",
+							"    pm.expect(response).to.be.an(\"array\");\r",
+							"});\r",
+							"\r",
+							"// Validate each expected ID is present in the response\r",
+							"pm.test(\"All expected IDs are present in the response\", () => {\r",
+							"    // Extract all IDs from the response array\r",
+							"    const responseIds = response.map(item => item.id);\r",
+							"\r",
+							"    // Check if every expected ID is in the response IDs\r",
+							"    expectedIds.forEach(id => {\r",
+							"        pm.expect(responseIds).to.include(id, `ID ${id} should be present`);\r",
+							"    });\r",
+							"});\r",
+							"\r",
+							"// Optional: Check the details of each item by ID\r",
+							"expectedIds.forEach(id => {\r",
+							"    pm.test(`Check details for item with ID ${id}`, () => {\r",
+							"        const item = response.find(item => item.id === id);\r",
+							"\r",
+							"        // Ensure the item exists\r",
+							"        pm.expect(item).to.be.an(\"object\", `Item with ID ${id} should exist`);\r",
+							"\r",
+							"        // Add specific assertions for the item's structure\r",
+							"        if (item) {\r",
+							"            pm.expect(item).to.have.property(\"name\");\r",
+							"            pm.expect(item).to.have.property(\"type\");\r",
+							"            pm.expect(item).to.have.property(\"available\");\r",
+							"        }\r",
+							"    });\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3005/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3005",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request Copy 2",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3005/delete/8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3005",
+					"path": [
+						"delete",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request Copy",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Parse the response body as JSON\r",
+							"const response = pm.response.json();\r",
+							"\r",
+							"// Test to check if the response is an array\r",
+							"pm.test(\"Response is an array\", () => {\r",
+							"    pm.expect(response).to.be.an(\"array\");\r",
+							"});\r",
+							"\r",
+							"// Test to check if the response array is empty\r",
+							"pm.test(\"Response array is empty\", () => {\r",
+							"    pm.expect(response.length).to.equal(0, \"Response array should be empty\");\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3005/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3005",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"id\": 1,\r\n        \"name\": \"True Love\",\r\n        \"type\": \"non-fiction\",\r\n        \"available\": false\r\n    },\r\n    {\r\n        \"id\": 5,\r\n        \"name\": \"Real Trouble\",\r\n        \"type\": \"fiction\",\r\n        \"available\": true\r\n    },\r\n    {\r\n        \"id\": 8,\r\n        \"name\": \"CSI Miami\",\r\n        \"type\": \"fiction\",\r\n        \"available\": true\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3005/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3005",
+					"path": [
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request Copy",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Expected IDs to check in the response\r",
+							"const expectedIds = [1, 5, 8];\r",
+							"\r",
+							"// Parse the response body as JSON\r",
+							"const response = pm.response.json();\r",
+							"\r",
+							"// Check if the response is an array\r",
+							"pm.test(\"Response is an array\", () => {\r",
+							"    pm.expect(response).to.be.an(\"array\");\r",
+							"});\r",
+							"\r",
+							"// Validate each expected ID is present in the response\r",
+							"pm.test(\"All expected IDs are present in the response\", () => {\r",
+							"    // Extract all IDs from the response array\r",
+							"    const responseIds = response.map(item => item.id);\r",
+							"\r",
+							"    // Check if every expected ID is in the response IDs\r",
+							"    expectedIds.forEach(id => {\r",
+							"        pm.expect(responseIds).to.include(id, `ID ${id} should be present`);\r",
+							"    });\r",
+							"});\r",
+							"\r",
+							"// Optional: Check the details of each item by ID\r",
+							"expectedIds.forEach(id => {\r",
+							"    pm.test(`Check details for item with ID ${id}`, () => {\r",
+							"        const item = response.find(item => item.id === id);\r",
+							"\r",
+							"        // Ensure the item exists\r",
+							"        pm.expect(item).to.be.an(\"object\", `Item with ID ${id} should exist`);\r",
+							"\r",
+							"        // Add specific assertions for the item's structure\r",
+							"        if (item) {\r",
+							"            pm.expect(item).to.have.property(\"name\");\r",
+							"            pm.expect(item).to.have.property(\"type\");\r",
+							"            pm.expect(item).to.have.property(\"available\");\r",
+							"        }\r",
+							"    });\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3005/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3005",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
